@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { User } from "lucide-react";
+import anaPatricia from "@/assets/ana-patricia.jpg";
 
 const Hero = () => {
   const scrollTo = (id: string) =>
@@ -25,10 +25,22 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Photo placeholder */}
+        {/* Professional photo with decorative frame */}
         <div className="flex justify-center">
-          <div className="w-72 h-80 md:w-80 md:h-96 rounded-2xl bg-secondary/20 border-2 border-secondary/30 flex items-center justify-center">
-            <User className="h-24 w-24 text-secondary/60" />
+          <div className="relative">
+            {/* Decorative background shape */}
+            <div className="absolute -inset-4 rounded-[2rem] bg-secondary/20 -rotate-3" />
+            <div className="absolute -inset-4 rounded-[2rem] border-2 border-secondary/30 rotate-2" />
+            {/* Photo */}
+            <div className="relative w-72 h-80 md:w-80 md:h-[28rem] rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={anaPatricia}
+                alt="Ana Patrícia de Oliveira — Solicitadora"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            {/* Accent dot */}
+            <div className="absolute -bottom-3 -right-3 w-16 h-16 rounded-full bg-secondary/30 blur-sm" />
           </div>
         </div>
       </div>
