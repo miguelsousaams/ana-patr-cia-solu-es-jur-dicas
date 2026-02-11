@@ -9,10 +9,12 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
     <>
+      <WhatsAppFloat />
       <Navbar />
       <main>
         <ScrollReveal>
