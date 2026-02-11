@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import bgWhyChoose from "@/assets/bg-why-choose.jpg";
 
 const bullets = [
   "Evita erros e atrasos",
@@ -8,8 +9,14 @@ const bullets = [
 ];
 
 const WhyChoose = () => (
-  <section id="porquê" className="py-16 md:py-24 bg-primary/5">
-    <div className="container grid md:grid-cols-2 gap-12 items-start">
+  <section id="porquê" className="py-16 md:py-24 bg-primary/5 relative overflow-hidden">
+    <img
+      src={bgWhyChoose}
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover opacity-[0.06] pointer-events-none"
+    />
+    <div className="container grid md:grid-cols-2 gap-12 items-start relative z-10">
       <div className="space-y-4">
         <h2 className="text-2xl md:text-3xl font-bold text-primary">
           Porquê trabalhar comigo?
