@@ -19,8 +19,6 @@ const Index = () => {
       <main>
         <ScrollReveal>
           <Hero />
-        </ScrollReveal>
-        <ScrollReveal>
           <TrustStrip />
         </ScrollReveal>
         <ScrollReveal>
