@@ -1,4 +1,5 @@
 import { MessageCircle, Search, ClipboardCheck } from "lucide-react";
+import { motion } from "framer-motion";
 import bgHowItWorks from "@/assets/bg-how-it-works.jpg";
 
 const steps = [
@@ -24,14 +25,14 @@ const HowItWorks = () => (
         <div className="hidden md:block absolute top-10 left-[20%] right-[20%] h-0.5 bg-secondary/30" />
 
         {steps.map((s, i) => (
-          <div key={s.title} className="flex flex-col items-center text-center relative">
+          <motion.div key={s.title} className="flex flex-col items-center text-center relative" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.15 }}>
             <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center mb-4 relative z-10">
               <s.icon className="h-8 w-8 text-primary-foreground" />
             </div>
             <span className="text-xs font-bold text-secondary mb-2">Passo {i + 1}</span>
             <h3 className="font-semibold text-primary mb-1">{s.title}</h3>
             <p className="text-sm text-muted-foreground max-w-xs">{s.desc}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

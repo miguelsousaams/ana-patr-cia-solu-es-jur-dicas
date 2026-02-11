@@ -1,5 +1,6 @@
 import { FileText, Home, Briefcase, Car } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 import bgServices from "@/assets/bg-services.jpg";
 
 const services = [
@@ -46,8 +47,9 @@ const Services = () => (
       </p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((s) => (
-          <Card key={s.title} className="border-secondary/20 shadow-sm hover:shadow-md transition-shadow">
+        {services.map((s, i) => (
+          <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
+          <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-shadow h-full">
             <CardHeader className="pb-3">
               <div className="w-12 h-12 rounded-lg bg-secondary/15 flex items-center justify-center mb-3">
                 <s.icon className="h-6 w-6 text-secondary" />
@@ -59,6 +61,7 @@ const Services = () => (
               <p className="text-sm font-medium text-secondary">{s.benefit}</p>
             </CardContent>
           </Card>
+          </motion.div>
         ))}
       </div>
     </div>
