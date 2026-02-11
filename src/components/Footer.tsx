@@ -19,15 +19,15 @@ const Footer = () => (
           <div className="space-y-2 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>[telefone]</span>
+              <span>+351 963 149 900</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <span>[email]</span>
+              <span>solicitadora8611@gmail.com</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
-              <span>[localização]</span>
+              <span>R. Tomé de Sousa 2, 4750-217 Barcelos</span>
             </div>
           </div>
         </div>

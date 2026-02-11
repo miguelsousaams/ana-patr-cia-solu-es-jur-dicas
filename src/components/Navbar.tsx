@@ -23,7 +23,7 @@ const Navbar = () => {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 text-primary font-semibold text-lg">
           <Scale className="h-6 w-6" />
-          <span className="hidden sm:inline">Ana Patrícia</span>
+          <span className="hidden sm:inline">Ana Patrícia de Oliveira | Solicitadora</span>
         </a>
 
         {/* Desktop nav */}

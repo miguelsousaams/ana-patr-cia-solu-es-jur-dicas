@@ -12,6 +12,7 @@ const FinalCTA = () => (
       <Button
         size="lg"
         className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold"
+        onClick={() => window.open("https://wa.me/351963149900", "_blank")}
       >
         Agendar contacto
       </Button>

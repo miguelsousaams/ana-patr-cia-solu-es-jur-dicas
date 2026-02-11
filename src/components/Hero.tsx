@@ -1,13 +1,24 @@
 import { Button } from "@/components/ui/button";
-import anaPatricia from "@/assets/ana-patricia.jpg";
+import anaPatricia from "@/assets/ana-patricia.png";
 
 const Hero = () => {
   const scrollTo = (id: string) =>
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section className="py-16 md:py-24">
-      <div className="container grid md:grid-cols-2 gap-12 items-center">
+    <section className="h-[calc(100vh-150px)] relative overflow-hidden flex flex-col justify-center">
+      <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none md:flex hidden mx-14">
+        <div className="relative w-full h-full">
+          <img
+            src={anaPatricia}
+            alt="Ana Patrícia de Oliveira — Solicitadora"
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Fade effect on the left */}
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent to-background/30" />
+        </div>
+      </div>
+      <div className="container grid md:grid-cols-2 gap-12 items-center relative z-10">
         <div className="space-y-6">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-primary">
             Segurança jurídica para as decisões importantes da sua vida e do seu negócio.
@@ -25,24 +36,8 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Professional photo with decorative frame */}
-        <div className="flex justify-center">
-          <div className="relative">
-            {/* Decorative background shape */}
-            <div className="absolute -inset-4 rounded-[2rem] bg-secondary/20 -rotate-3" />
-            <div className="absolute -inset-4 rounded-[2rem] border-2 border-secondary/30 rotate-2" />
-            {/* Photo */}
-            <div className="relative w-72 h-80 md:w-80 md:h-[28rem] rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src={anaPatricia}
-                alt="Ana Patrícia de Oliveira — Solicitadora"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            {/* Accent dot */}
-            <div className="absolute -bottom-3 -right-3 w-16 h-16 rounded-full bg-secondary/30 blur-sm" />
-          </div>
-        </div>
+        {/* Empty space for layout */}
+        <div />
       </div>
     </section>
   );
