@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="min-h-[calc(100vh-150px)] relative overflow-hidden flex flex-col justify-center">
       {/* Desktop background photo */}
-      <div className="absolute inset-y-0 right-0 w-2/5 pointer-events-none hidden md:flex mx-14">
+      <div className="absolute inset-y-0 right-0 w-3/5 pointer-events-none hidden md:flex sm:mx-14">
         <div className="relative w-full h-full">
           <img
             src={anaPatricia}
@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="flex justify-center mb-8 md:hidden">
           <div className="relative">
             <div className="absolute -inset-3 rounded-full bg-secondary/15" />
-            <div className="w-40 h-40 rounded-full overflow-hidden shadow-lg border-4 border-secondary/20 relative">
+            <div className="md:w-50 md:h-50 w-40 h-40 rounded-full overflow-hidden shadow-lg border-4 border-secondary/20 relative">
               <img
                 src={anaPatricia}
                 alt="Ana Patrícia de Oliveira — Solicitadora"
