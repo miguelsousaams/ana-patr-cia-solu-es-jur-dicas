@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import anaPatricia from "@/assets/ana-patricia.png";
+import anaPatricia from "@/assets/ana-patricia.webp";
 
 const Hero = () => {
   const scrollTo = (id: string) =>
