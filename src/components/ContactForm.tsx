@@ -14,7 +14,7 @@ const ContactForm = () => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const name = form.name.trim();
@@ -36,13 +36,32 @@ const ContactForm = () => {
 
     setSending(true);
 
-    // Build WhatsApp message with encoded user input
-    const text = `Olá, o meu nome é ${name}.\nEmail: ${email}${form.phone.trim() ? `\nTelefone: ${form.phone.trim()}` : ""}\n\n${message}`;
-    window.open(`https://wa.me/351963149900?text=${encodeURIComponent(text)}`, "_blank");
+    try {
+      const response = await fetch("https://formspree.io/f/xykdkdyk", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: form.phone.trim() || "Não fornecido",
+          message: message,
+        }),
+      });
 
-    setSending(false);
-    toast.success("A redirecionar para o WhatsApp...");
-    setForm({ name: "", email: "", phone: "", message: "" });
+      if (response.ok) {
+        toast.success("Email enviado com sucesso! Em breve entraremos em contacto.");
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast.error("Erro ao enviar email. Por favor, tente novamente.");
+      }
+    } catch (error) {
+      console.error("Form error:", error);
+      toast.error("Erro ao enviar email. Por favor, tente novamente.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
