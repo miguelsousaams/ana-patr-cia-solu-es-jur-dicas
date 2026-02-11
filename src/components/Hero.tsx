@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="min-h-[calc(100vh-150px)] relative overflow-hidden flex flex-col justify-center">
       {/* Desktop background photo */}
-      <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none hidden md:flex mx-14">
+      <div className="absolute inset-y-0 right-0 w-2/5 pointer-events-none hidden md:flex mx-14">
         <div className="relative w-full h-full">
           <img
             src={anaPatricia}

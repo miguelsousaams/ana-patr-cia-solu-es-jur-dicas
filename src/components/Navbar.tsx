@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import apVerde from "@/assets/AP_verde.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -22,7 +23,11 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 text-primary font-semibold text-lg">
-          <Scale className="h-6 w-6" />
+          <img
+            src={apVerde}
+            alt="Ana Patrícia de Oliveira — Solicitadora"
+            className="w-8"
+          />
           <span className="hidden sm:inline">Ana Patrícia de Oliveira | Solicitadora</span>
         </a>
 
