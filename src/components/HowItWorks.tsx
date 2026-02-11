@@ -1,4 +1,5 @@
 import { MessageCircle, Search, ClipboardCheck } from "lucide-react";
+import bgHowItWorks from "@/assets/bg-how-it-works.jpg";
 
 const steps = [
   { icon: MessageCircle, title: "Contacta-me", desc: "Envie a sua questão por telefone, email ou formulário." },
@@ -7,14 +8,19 @@ const steps = [
 ];
 
 const HowItWorks = () => (
-  <section className="py-16 md:py-24">
-    <div className="container">
+  <section className="py-16 md:py-24 relative overflow-hidden">
+    <img
+      src={bgHowItWorks}
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover opacity-[0.08] pointer-events-none"
+    />
+    <div className="container relative z-10">
       <h2 className="text-2xl md:text-3xl font-bold text-primary text-center mb-12">
         Como funciona?
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8 relative">
-        {/* Connecting line (desktop) */}
         <div className="hidden md:block absolute top-10 left-[20%] right-[20%] h-0.5 bg-secondary/30" />
 
         {steps.map((s, i) => (

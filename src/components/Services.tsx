@@ -1,5 +1,6 @@
 import { FileText, Home, Briefcase, Car } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import bgServices from "@/assets/bg-services.jpg";
 
 const services = [
   {
@@ -29,8 +30,14 @@ const services = [
 ];
 
 const Services = () => (
-  <section id="servicos" className="py-16 md:py-24">
-    <div className="container">
+  <section id="servicos" className="py-16 md:py-24 relative overflow-hidden">
+    <img
+      src={bgServices}
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover opacity-[0.07] pointer-events-none"
+    />
+    <div className="container relative z-10">
       <h2 className="text-2xl md:text-3xl font-bold text-primary text-center mb-4">
         Serviços de Solicitadoria
       </h2>
