@@ -1,5 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -33,8 +34,9 @@ const Testimonials = () => (
       </p>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {testimonials.map((t) => (
-          <Card key={t.name} className="border-secondary/20 shadow-sm hover:shadow-md transition-shadow relative">
+        {testimonials.map((t, i) => (
+          <motion.div key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
+          <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-shadow relative h-full">
             <CardContent className="pt-8 pb-6 px-6 space-y-4">
               <Quote className="h-8 w-8 text-secondary/30 absolute top-4 right-4" />
               <div className="flex gap-0.5">
@@ -51,6 +53,7 @@ const Testimonials = () => (
               </div>
             </CardContent>
           </Card>
+          </motion.div>
         ))}
       </div>
     </div>

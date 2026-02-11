@@ -8,22 +8,41 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const Index = () => {
   return (
     <>
       <Navbar />
       <main>
-        <Hero />
-        <TrustStrip />
-        <Services />
-        <WhyChoose />
-        <HowItWorks />
-        <Testimonials />
-        <FAQ />
-        <FinalCTA />
+        <ScrollReveal>
+          <Hero />
+        </ScrollReveal>
+        <ScrollReveal>
+          <TrustStrip />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Services />
+        </ScrollReveal>
+        <ScrollReveal>
+          <WhyChoose />
+        </ScrollReveal>
+        <ScrollReveal>
+          <HowItWorks />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Testimonials />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FAQ />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FinalCTA />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Footer />
+        </ScrollReveal>
       </main>
-      <Footer />
     </>
   );
 };
