@@ -1,4 +1,4 @@
-import { FileText, Home, Briefcase, Car } from "lucide-react";
+import { FileText, Home, Briefcase, Car, PersonStanding } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import bgServices from "@/assets/bg-services.jpg";
@@ -7,26 +7,31 @@ const services = [
   {
     icon: FileText,
     title: "Contratos e Atos Jurídicos",
-    items: "Compra e venda, arrendamento, procurações, autenticações",
+    items: "Compra e Venda, Arrendamento, Doação, Procurações e Autenticações",
     benefit: "Evite erros e ganhe tranquilidade.",
   },
   {
     icon: Home,
     title: "Imobiliário e Registo Predial",
-    items: "Legalização, registos, retificações, apoio em heranças",
+    items: "Legalizações e Retificações, Constituição e Modificação de Propriedade Horizontal, Averbamentos",
     benefit: "Proteja o seu património com segurança.",
   },
   {
     icon: Briefcase,
     title: "Empresas e Empreendedores",
-    items: "Constituição, alterações societárias, RCBE, marcas, certidões",
+    items: "Constituição, Alterações, RCBE, Registo de Marca, Certidões",
     benefit: "Foque-se no negócio. Nós tratamos do resto.",
   },
   {
     icon: Car,
     title: "Registos Automóvel e Comercial",
-    items: "Registos, alterações, regularizações",
+    items: "Legalização de veículos, Compra e Venda, Extinção de Reserva de Propriedade",
     benefit: "Tudo tratado de forma rápida e correta.",
+  },{
+    icon: PersonStanding,
+    title: "Familia e Sucessões",
+    items: "Doações, Heranças, Partilhas, processo de casamento e divórcio",
+    benefit: "Acompanhamento jurídico em todas as fases da sua vida.",
   },
 ];
 
@@ -46,7 +51,7 @@ const Services = () => (
         Soluções jurídicas para particulares e empresas em Portugal.
       </p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s, i) => (
           <motion.div key={s.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
           <Card className="border-secondary/20 shadow-sm hover:shadow-md transition-shadow h-full">
