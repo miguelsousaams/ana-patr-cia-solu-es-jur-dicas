@@ -23,7 +23,7 @@ const WhyChoose = () => (
         </h2>
         <p className="text-muted-foreground leading-relaxed">
           Acredito que a prevenção é a melhor forma de proteção. O meu trabalho é garantir
-          que cada documento, contrato ou registo está correto desde o início — poupando-lhe
+          que cada documento, contrato ou registo está correto desde o início, poupando-lhe
           tempo, dinheiro e preocupações futuras. Clareza na comunicação, rigor no processo.
         </p>
       </div>

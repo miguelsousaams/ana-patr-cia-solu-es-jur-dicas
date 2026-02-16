@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import anaPatricia from "@/assets/ana-patricia.webp";
+import anaPatriciaMobile from "@/assets/ana-patricia-1.webp";
 
 const Hero = () => {
   const scrollTo = (id: string) =>
@@ -26,7 +27,7 @@ const Hero = () => {
             <div className="absolute -inset-3 rounded-full bg-secondary/15" />
             <div className="md:w-50 md:h-50 w-40 h-40 rounded-full overflow-hidden shadow-lg border-4 border-secondary/20 relative">
               <img
-                src={anaPatricia}
+                src={anaPatriciaMobile}
                 alt="Ana Patrícia de Oliveira — Solicitadora"
                 className="w-full h-full object-cover object-top"
               />
@@ -40,7 +41,7 @@ const Hero = () => {
               Segurança jurídica para as decisões importantes da sua vida e do seu negócio.
             </h1>
             <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0">
-              Acompanhamento jurídico claro, rigoroso e sem complicações — para particulares e empresas.
+              Acompanhamento jurídico claro, rigoroso e sem complicações para particulares e empresas.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <Button size="lg" onClick={() => scrollTo("#contacto")}>
